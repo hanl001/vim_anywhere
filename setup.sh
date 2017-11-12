@@ -25,3 +25,7 @@ exe_cmd "ln -sf $root_dir/files/_vimrc $vim_rc"
 exe_cmd 'git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim'
 exe_cmd 'vim +PluginInstall +qall'
 
+# compile YCM
+youCompleteMe_dir=$vim_alias_dir/bundle/YouCompleteMe
+exe_cmd 'cd $youCompleteMe_dir'
+exe_cmd './install.py --clang-completer --system-libclang'
