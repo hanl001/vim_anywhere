@@ -60,6 +60,7 @@ Plugin 'JulesWang/css.vim' " only necessary if your Vim version < 7.4
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'groenewege/vim-less'
 Plugin 'mxw/vim-jsx'
+plugin 'hanl001/vim-swift'
 Plugin 'digitaltoad/vim-jade'
 let g:jsx_ext_required = 0
 
