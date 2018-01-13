@@ -29,3 +29,6 @@ exe_cmd 'vim +PluginInstall +qall'
 youCompleteMe_dir=$vim_alias_dir/bundle/YouCompleteMe
 exe_cmd 'cd $youCompleteMe_dir'
 exe_cmd './install.py --clang-completer --system-libclang'
+
+exe_cmd 'cd $vim_alias_dir/bundle'
+exe_cmd 'git clone git@github.com:hanl001/vim-swift.git'
