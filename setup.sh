@@ -22,8 +22,13 @@ fi
 exe_cmd "ln -sf $root_dir/files/vimfiles  $vim_alias_dir"
 exe_cmd "ln -sf $root_dir/files/_vimrc $vim_rc"
 
-exe_cmd 'git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim'
+if [ ! -d "$vim_alias_dir/bundle/Vundle.vim" ]; then
+    exe_cmd 'git clone https://github.com/VundleVim/Vundle.vim.git $vim_alias_dir/bundle/Vundle.vim'
+fi
+
+if [ ! -d "$vim_alias_dir/bundle/vim-swift" ]; then
+    exe_cmd 'git clone git@github.com:hanl001/vim-swift.git $vim_alias_dir/bundle/vim-swift'
+fi
+
 exe_cmd 'vim +PluginInstall +qall'
 
-exe_cmd 'cd $vim_alias_dir/bundle'
-exe_cmd 'git clone git@github.com:hanl001/vim-swift.git'
