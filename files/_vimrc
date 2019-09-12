@@ -233,6 +233,7 @@ autocmd FileType htmldjango setlocal expandtab shiftwidth=2 tabstop=2 softtabsto
 autocmd FileType json setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType javascript.jsx setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType jade setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType yaml setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
 " Linebreak on 500 characters
 set lbr
@@ -428,9 +429,7 @@ map <leader>pp :setlocal paste!<cr>
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! CmdLine(str)
-    exe "menu Foo.Bar :" . a:str
-    emenu Foo.Bar
-    unmenu Foo
+    call feedkeys(":" . a:str)
 endfunction
 
 function! VisualSelection(direction) range
