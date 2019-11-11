@@ -64,8 +64,10 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'posva/vim-vue'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'ybian/smartim'
 let g:jsx_ext_required = 0
 let g:vim_markdown_folding_disabled = 1
+let g:smartim_default = 'com.apple.keylayout.ABC'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

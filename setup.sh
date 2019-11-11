@@ -20,6 +20,7 @@ fi
 
 exe_cmd "ln -sf $root_dir/files/vimfiles  $vim_alias_dir"
 exe_cmd "ln -sf $root_dir/files/_vimrc $vim_rc"
+exe_cmd "curl -Ls https://raw.githubusercontent.com/daipeihust/im-select/master/install_mac.sh | sh"
 
 if [ ! -d "$vim_alias_dir/bundle/Vundle.vim" ]; then
     exe_cmd 'git clone https://github.com/VundleVim/Vundle.vim.git $vim_alias_dir/bundle/Vundle.vim'
